@@ -1,8 +1,19 @@
-export function add(a: number, b: number): number {
-  return a + b;
-}
+import client from "./db/client.ts";
 
-// Learn more at https://docs.deno.com/runtime/manual/examples/module_metadata#concepts
-if (import.meta.main) {
-  console.log("Add 2 + 3 =", add(2, 3));
-}
+Deno.serve(async (req) => {
+	if (req.headers.get("upgrade") != "websocket") {
+		return new Response(null, { status: 501 });
+	}
+
+	const { socket, response } = Deno.upgradeWebSocket(req);
+
+	socket.addEventListener("open", () => {
+		console.log("a client connected!");
+	});
+	socket.addEventListener("message", (event) => {
+		if (event.data === "ping") {
+			socket.send("pong");
+		}
+	});
+	return response;
+});
