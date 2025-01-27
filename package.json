@@ -24,9 +24,13 @@
     "@mantine/hooks": "7.16.1",
     "@next/bundle-analyzer": "^15.1.5",
     "@tabler/icons-react": "^3.28.1",
+    "natural": "^8.0.1",
     "next": "15.1.5",
+    "next-ws": "^1.2.0",
     "react": "19.0.0",
-    "react-dom": "19.0.0"
+    "react-dom": "19.0.0",
+    "socket.io": "^4.8.1",
+    "ws": "^8.18.0"
   },
   "devDependencies": {
     "@babel/core": "^7.26.0",
@@ -42,6 +46,7 @@
     "@types/jest": "^29.5.14",
     "@types/node": "^22.10.7",
     "@types/react": "19.0.7",
+    "@types/ws": "^8",
     "babel-loader": "^9.2.1",
     "eslint": "^9.18.0",
     "eslint-config-mantine": "^4.0.3",
