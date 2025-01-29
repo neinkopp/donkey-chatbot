@@ -1,10 +1,9 @@
-import client from "../db/client.ts";
 import catalog from "./catalog.json" with { type: "json" };
 import { getBestAnswer } from "./utils/get-best-answer.ts";
-import { getDictionary, processCatalog } from "./utils/process-catalog.ts";
 import { MessageType } from "./utils/preprocess.ts";
+import { getDictionary, processCatalog } from "./utils/process-catalog.ts";
 
-export const handleMessageEvent = async (event: MessageEvent, socket: WebSocket) => {
+export const handleMessageEvent = (event: MessageEvent, socket: WebSocket) => {
 	const preprocessedQuestionCatalog = processCatalog(catalog.questions);
 	const preprocessedGreetingCatalog = processCatalog(catalog.greetings);
 	const dictionary = [

@@ -3,7 +3,7 @@ import { serveDir } from "jsr:@std/http/file-server";
 import { handleMessageEvent } from "./server/message-handler.ts";
 import { handleOpenEvent } from "./server/open-handler.ts";
 
-Deno.serve(async (req) => {
+Deno.serve((req) => {
 	if (req.headers.get("upgrade") != "websocket") {
 		// serve static files from app directory
 		return serveDir(req, {
