@@ -4,12 +4,53 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
+	<title>Donkeybot - BUGLAND Ltd.</title>
+	<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 
+	<div class="back" id="back">
+
+		<img class="donkeytron" src="resources/roboter rework blue.svg" alt="no image :c">
+		<img class="donkeyoff" id="img-off" src="resources/roboter less light.svg" alt="no lights :c">
+
+
+		<div class="chest">
+			<div class="balls" id="balls"></div>
+			<div class="tummy">
+				<div class="peepee" id="peepee">
+					<input class="longlongman" id="longlongman" placeholder="Request">
+					<button class="cum" id="cum">send</button>
+				</div>
+
+			</div>
+		</div>
+	</div>
 </body>
+
+<script src="script.js"></script>
+<script>
+	start(); //enter 
+	const inputField = document.getElementById("longlongman");
+	const sendButton = document.getElementById("cum");
+
+	function bzzzzt() {
+		let min = 1;
+		let max = 4;
+		let randomInt = Math.floor(Math.random() * (max - min + 1)) + min;
+		let sound = new Audio("resources/" + randomInt + ".mp3");
+		sound.play().catch(function (error) { console.log(error); });
+	}
+
+	inputField.addEventListener("keydown", function (event) {
+		if (event.key == "Enter") {
+			event.preventDefault();
+			sendButton.click();
+		}
+	});
+
+</script>
 
 </html>

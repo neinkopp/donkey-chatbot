@@ -1,19 +1,22 @@
-import client from "./db/client.ts";
+import { serveDir } from "jsr:@std/http/file-server";
+
+import { handleMessageEvent } from "./server/message-handler.ts";
+import { handleOpenEvent } from "./server/open-handler.ts";
 
 Deno.serve(async (req) => {
 	if (req.headers.get("upgrade") != "websocket") {
-		return new Response(null, { status: 501 });
+		// serve static files from app directory
+		return serveDir(req, {
+			fsRoot: "./app",
+		});
 	}
 
+	// upgrade the connection to a WebSocket
 	const { socket, response } = Deno.upgradeWebSocket(req);
 
-	socket.addEventListener("open", () => {
-		console.log("a client connected!");
-	});
-	socket.addEventListener("message", (event) => {
-		if (event.data === "ping") {
-			socket.send("pong");
-		}
-	});
+	socket.addEventListener("open", () => handleOpenEvent(socket));
+	socket.addEventListener("message", (event) =>
+		handleMessageEvent(event, socket)
+	);
 	return response;
 });

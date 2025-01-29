@@ -4,6 +4,7 @@
   },
   "imports": {
     "@std/assert": "jsr:@std/assert@1",
+    "@std/http": "jsr:@std/http@^1.0.12",
     "natural": "npm:natural@^8.0.1"
   }
 }

@@ -23,3 +23,11 @@ Aufgabenfelder:
 
     use case diagramm
      Katerina 
+
+
+
+Chatverzögerung
+Branding auf Website
+Weitere Tests
+Use-Case-Diagramm
+Präsentation vorbereiten
