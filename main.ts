@@ -14,6 +14,7 @@ Deno.serve((req) => {
 	// upgrade the connection to a WebSocket
 	const { socket, response } = Deno.upgradeWebSocket(req);
 
+	// handle WebSocket events
 	socket.addEventListener("open", () => handleOpenEvent(socket));
 	socket.addEventListener("message", (event) =>
 		handleMessageEvent(event, socket)

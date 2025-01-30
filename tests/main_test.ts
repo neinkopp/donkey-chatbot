@@ -15,11 +15,12 @@ const mockSocket = (messageType: MessageType, id: number) => ({
 	},
 } as WebSocket);
 
-Deno.test("replies with hello message to hello", () =>  handleMessageEvent(
+Deno.test("replies with hello message to hello", () => handleMessageEvent(
 		{
 			data: "Hello",
 		} as MessageEvent,
-		mockSocket(MessageType.Greeting, 1)
+		mockSocket(MessageType.Greeting, 1),
+		true
 	));
 
 Deno.test("replies with hello message to hi", () =>
@@ -27,7 +28,8 @@ Deno.test("replies with hello message to hi", () =>
 		{
 			data: "Hi",
 		} as MessageEvent,
-		mockSocket(MessageType.Greeting, 1)
+		mockSocket(MessageType.Greeting, 1),
+		true
 	));
 
 Deno.test("replies to windowfly being stuck", () => 
@@ -35,5 +37,6 @@ Deno.test("replies to windowfly being stuck", () =>
 		{
 			data: "Windowfly is stuck",
 		} as MessageEvent,
-		mockSocket(MessageType.Question, 2)
+		mockSocket(MessageType.Question, 2),
+		true
 	));

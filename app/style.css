@@ -20,8 +20,23 @@
 	width: 100%;
 	height: 100vh;
 	display: flex;
-	justify-content: center;
-	align-items: flex-end;
+	justify-content: flex-end;
+	align-items: center;
+	flex-direction: column;
+}
+
+.thembeautifuleyes {
+	display: flex;
+	background-color: rgb(36, 46, 65);
+	margin-bottom: auto;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.title {
+	font-size: 5em;
+	font-family: monospace;
+	color: rgb(45, 83, 155);
 }
 
 .donkeytron {
@@ -85,14 +100,10 @@
 	opacity: 100%;
 }
 
-.botsound {
-}
-
 .chest {
 	display: flex;
 	justify-content: flex-end;
 	flex-direction: column;
-	height: 80%;
 }
 
 .tummy {
@@ -100,7 +111,7 @@
 	justify-content: center;
 	align-items: center;
 	width: 60em;
-	height: 7.5vh;
+
 	background-color: rgb(85, 130, 148);
 	margin-bottom: 4em;
 	border-radius: 1em;
@@ -126,6 +137,7 @@
 	flex-direction: column;
 	overflow-y: auto;
 	overflow-x: hidden;
+	height: 600px;
 }
 
 ::-webkit-scrollbar {
@@ -190,6 +202,10 @@
 	outline: none;
 }
 
+::-webkit-input-placeholder {
+	color: rgb(215, 219, 230);
+}
+
 .cum {
 	width: auto;
 	padding-left: 0.8em;
@@ -210,4 +226,17 @@
 
 .cum:active {
 	background-color: rgb(56, 83, 95);
+}
+
+.write-indicator {
+	margin-left: 5em;
+	padding: 1em;
+	padding-bottom: 1em;
+	color: white;
+	font-family: monospace;
+	width: 11em;
+	border-top-left-radius: 1em;
+	border-top-right-radius: 1em;
+	background-color: rgb(71, 109, 124);
+	visibility: hidden;
 }

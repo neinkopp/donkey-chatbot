@@ -3,7 +3,27 @@ import { getBestAnswer } from "./utils/get-best-answer.ts";
 import { MessageType } from "./utils/preprocess.ts";
 import { getDictionary, processCatalog } from "./utils/process-catalog.ts";
 
-export const handleMessageEvent = (event: MessageEvent, socket: WebSocket) => {
+const sendMessage = (question: string, answer: string, socket: WebSocket, skipTimeout: boolean = false) => {
+	const questionWordCount = question.split(" ").length;
+	const answerWordCount = answer.split(" ").length;
+
+	const readTime = questionWordCount * 0.01;
+	const answerTime = answerWordCount * 0.05;
+
+	const totalTime = readTime + answerTime;
+
+	if(skipTimeout) {
+		socket.send(answer);
+		return;
+	} else {
+		setTimeout(() => {
+			socket.send(answer);
+		}, totalTime * 1000);
+	}
+};
+
+export const handleMessageEvent = (event: MessageEvent, socket: WebSocket, skipTimeout: boolean = false) => {
+	const question = event.data;
 	const preprocessedQuestionCatalog = processCatalog(catalog.questions);
 	const preprocessedGreetingCatalog = processCatalog(catalog.greetings);
 	const dictionary = [
@@ -12,19 +32,19 @@ export const handleMessageEvent = (event: MessageEvent, socket: WebSocket) => {
 	].flat();
 
 	const response = getBestAnswer(
-		event.data,
+		question,
 		preprocessedQuestionCatalog,
 		dictionary,
 		MessageType.Question
 	);
 	const answer = catalog.questions.find(({ id }) => id === response)?.answer;
 	if (answer) {
-		socket.send(answer);
+		sendMessage(question, answer, socket, skipTimeout);
 		return;
 	}
 
 	const greetingResponse = getBestAnswer(
-		event.data,
+		question,
 		preprocessedGreetingCatalog,
 		dictionary,
 		MessageType.Greeting
@@ -33,8 +53,8 @@ export const handleMessageEvent = (event: MessageEvent, socket: WebSocket) => {
 		({ id }) => id === greetingResponse
 	)?.answer;
 	if (greetingAnswer) {
-		socket.send(greetingAnswer);
+		sendMessage(event.data, greetingAnswer, socket, skipTimeout);
 	} else {
-		socket.send(catalog.default);
+		sendMessage(event.data, catalog.default, socket, skipTimeout);
 	}
 }

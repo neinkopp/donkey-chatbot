@@ -29,5 +29,21 @@ Aufgabenfelder:
 Chatverzögerung
 Branding auf Website
 Weitere Tests
-Use-Case-Diagramm
+
 Präsentation vorbereiten
+
+Andere Chatbots:
+O2 Aura
+
+
+Requirements:
+- Install Deno über Powershell:
+	irm https://deno.land/install.ps1 | iex
+	-ODER, falls nicht funktioniert-
+	winget install DenoLand.Deno
+- Dependencies installieren:
+	deno install
+- Server starten:
+    deno task dev
+
+https://docs.deno.com/runtime/getting_started/installation/

@@ -371,7 +371,8 @@
 				"Connect me to a human agent.",
 				"I want to speak to a supervisor.",
 				"Can I talk to a real person now?",
-				"Please connect me to a live agent."
+				"Please connect me to a live agent.",
+				"I can't explain the problem"
 			],
 			"answer": "Transferring you to a live agent. Wait times are currently under 5 minutes. Thank you for your patience!"
 		},
@@ -393,6 +394,38 @@
 				"I have a problem with my Gardenbeetle"
 			],
 			"answer": "Can you explain to me the problem?"
+		},
+		{
+			"id": "39",
+			"questions": [
+				"My Cleanbug is not cleaning the ground?",
+				"Why is my Cleanbug not cleaning?",
+				"I have a problem with my Cleanbug not cleaning",
+				"My Cleanbug is not cleaning"
+			],
+			"answer": "If the Cleanbug is not cleaning, there might be a hardware or software issue. Clean brushes weekly, update firmware monthly, and avoid wet surfaces unless the ‘Mop Mode’ is activated. If the Cleanbug doesn't start, check the battery and ensure it is fully charged. Make sure the power button is pressed and held for a few seconds. If it still doesn't turn on, try resetting the device or contact customer support."
+		},
+		{
+			"id": "40",
+			"questions": ["Asshole Fuck you Fucking Bitch Fuckface idiot"],
+			"answer": "Get fucked."
+		},
+		{
+			"id": "41",
+			"questions": ["You donkey "],
+			"answer": "You are an idiot sandwich."
+		},
+
+		{
+			"id": "42",
+			"questions": ["I'll whoop your ass!"],
+			"answer": "You girlfriend look like my mom!"
+		},
+
+		{
+			"id": "43",
+			"questions": ["Did you cut your hair?"],
+			"answer": "I hate you >:("
 		}
 	],
 	"greetings": [
@@ -477,5 +510,5 @@
 			"why"
 		]
 	},
-	"default": "Your request has been sent to customer support. They will get back to you shortly. If you need immediate assistance, please visit the BUGLAND website for more contact options. Thank you for your patience."
+	"default": "Unfortunately I cannot help you with this problem. Your request has been sent to customer support. They will get back to you shortly. If you need immediate assistance, please visit the BUGLAND website for more contact options. Thank you for your patience."
 }

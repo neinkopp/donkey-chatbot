@@ -5,12 +5,15 @@ function start() {
 	let userRequestText = document.getElementById("longlongman");
 	let userRequestButton = document.getElementById("cum");
 
+	let writingIndicator = document.getElementById("write-indicator");
+
 	socket.addEventListener("open", (event) => {
 		console.log("WebSocket is open now.");
 		createChatElement(event.data, "server");
 	});
 	socket.addEventListener("message", (event) => {
 		createChatElement(event.data, "server");
+		writingIndicator.style.visibility = "hidden";
 	});
 
 	socket.addEventListener("error", (event) => {
@@ -32,6 +35,7 @@ function start() {
 			console.log("Message sent to server: " + userRequestText.value);
 			createChatElement(userRequestText.value, "user");
 			userRequestText.value = "";
+			writingIndicator.style.visibility = "visible";
 		} else {
 			console.log("WebSocket is not open.");
 		}
@@ -59,7 +63,22 @@ function createChatElement(text, origin) {
 			break;
 	}
 	messageElement.className = className;
-	messageElement.textContent = text;
 	document.getElementById("balls").appendChild(messageElement);
-	document.getElementById("balls").scrollTop = 99999999;
+	fillChatElement(text, messageElement, origin);
 }
+
+const delay = (ms) => new Promise((res) => setTimeout(res, ms));
+const fillChatElement = async (text, textBox, origin) => {
+	if (origin === "server") {
+		words = text.split(" ");
+		textBox.textContent = words[0];
+		for (let i = 1; i < words.length; i++) {
+			await delay(100);
+			textBox.textContent = textBox.textContent + " " + words[i];
+			document.getElementById("balls").scrollTop = 99999999;
+		}
+	} else {
+		textBox.textContent = text;
+		document.getElementById("balls").scrollTop = 99999999;
+	}
+};
