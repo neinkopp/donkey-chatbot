@@ -84,32 +84,24 @@ const fillChatElement = async (text, textBox, origin) => {
 	}
 };
 
-
-function getAngry(text){
-
+function getAngry(text) {
 	let splitText = text;
 	let result = splitText.split("|");
 
 	console.log(result);
-	let id = (result[0]);
+	let id = result[0];
 
-	if(id=="36"||id=="37"||id=="38" ||id=="39" && !id){  
-		let element = document.getElementById('img-evil');
-		element.style.visibility = 'visible';
+	if (id == "36" || id == "37" || id == "38" || (id == "39" && !id)) {
+		let element = document.getElementById("img-evil");
+		element.style.visibility = "visible";
+	} else {
+		let element = document.getElementById("img-evil");
+		element.style.visibility = "hidden";
 	}
-	else{
-	let element = document.getElementById('img-evil');
-	element.style.visibility = 'hidden';
-	}
-	
 
-	if(result.length>1){
+	if (result.length > 1) {
 		return result[1];
-	}
-	else{
+	} else {
 		return text;
 	}
-
 }
-
-

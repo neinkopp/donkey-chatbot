@@ -47,24 +47,22 @@ export const getBestAnswer = (
 	console.log("questions", questions.length);
 	console.log("Catalog", catalog.length);
 	console.log("filteredCatalog", filteredCatalog.length);
-	
-	for(let i = 0; i < filteredCatalog.length; i++) {
+
+	for (let i = 0; i < filteredCatalog.length; i++) {
 		if (filteredCatalog[i].category == category) {
-			filteredCatalog.splice(i,1);
+			filteredCatalog.splice(i, 1);
 			i--;
 		}
 	}
 
-	
-
-	for(let i = 0; i < filteredCatalog.length; i++) {
-		for(let j = 0; j < questions.length; j++) {
+	for (let i = 0; i < filteredCatalog.length; i++) {
+		for (let j = 0; j < questions.length; j++) {
 			if (filteredCatalog[i].id == questions[j].id) {
-				questions.splice(j,1);
+				questions.splice(j, 1);
 				j--;
 			}
 		}
-	} 
+	}
 	console.log("----AFTER----");
 	console.log("category", category);
 	console.log("questions", questions.length);
@@ -92,6 +90,8 @@ export const getBestAnswer = (
 			bestMatchId = id;
 		}
 	});
+
+	console.log(questions);
 
 	if (bestMatchId === null) {
 		return null;

@@ -34,15 +34,15 @@ export const handleMessageEvent = (event: MessageEvent, socket: WebSocket, skipT
 	const response = getBestAnswer(question, preprocessedQuestionCatalog, dictionary, MessageType.Question, catalog.questions);
 	const answer = catalog.questions.find(({ id }) => id === response)?.answer;
 	if (answer) {
-		sendMessage(question, response + "|" + answer, socket, skipTimeout);
+		sendMessage(question, answer, socket, skipTimeout);
 		return;
 	}
 
 	const greetingResponse = getBestAnswer(question, preprocessedGreetingCatalog, dictionary, MessageType.Greeting, catalog.greetings);
 	const greetingAnswer = catalog.greetings.find(({ id }) => id === greetingResponse)?.answer;
 	if (greetingAnswer) {
-		sendMessage(event.data, greetingResponse + "|" + greetingAnswer, socket, skipTimeout);
+		sendMessage(event.data, greetingAnswer, socket, skipTimeout);
 	} else {
-		sendMessage(event.data, response + "|" +  catalog.default, socket, skipTimeout);
+		sendMessage(event.data, catalog.default, socket, skipTimeout);
 	}
 }
