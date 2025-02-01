@@ -2,258 +2,108 @@
 	"questions": [
 		{
 			"id": "1",
+			"category": "cleanbug",
 			"questions": [
-				"How can I program my Cleanbug?",
-				"Can I program the Cleanbug?",
-				"Can I set the Cleanbug to clean only specific rooms?",
-				"How can I make the Cleanbug climb stairs?"
+				"I want to program my Cleanbug",
+				"Can I set the Cleanbug to clean specific rooms only?",
+				"How do I program the Cleanbug's software?",
+				"Can I program the Cleanbug manually?",
+				"How can I enable the Cleanbug to climb stairs?"
 			],
 			"answer": "To program the Cleanbug, use the accompanying app. You can create cleaning schedules, select specific rooms, and activate the stair-climbing feature."
 		},
 		{
 			"id": "2",
-			"questions": [
-				"How does the Windowfly clean windows?",
-				"Can the Windowfly clean high windows?",
-				"How often do I need to maintain the Windowfly?",
-				"What should I do if the Windowfly gets stuck?"
-			],
-			"answer": "The Windowfly cleans windows autonomously by vacuuming and wiping. It can reach high windows as well. Regular maintenance is recommended every 3 months. If the Windowfly gets stuck, restart it or check the sensors."
-		},
-		{
-			"id": "3",
-			"questions": [
-				"How does the Gardenbeetle work?",
-				"Can the Gardenbeetle remove weeds?",
-				"How often should the Gardenbeetle mow the lawn?",
-				"What should I do if the Gardenbeetle stops charging?"
-			],
-			"answer": "The Gardenbeetle autonomously mows the lawn and removes weeds. It can be programmed to mow regularly as needed. If it stops charging, check the charging station and connections."
-		},
-		{
-			"id": "4",
-			"questions": [
-				"How do I connect the devices to the app?",
-				"Which app do I need for BUGLAND products?",
-				"Can I control multiple devices at once?",
-				"What should I do if the app doesn't recognize the devices?",
-				"Where can I get the app?",
-				"Where can I download the app?",
-				"Where can I download the BUGLAND application?"
-			],
-			"answer": "Connect the devices using the BUGLAND app, available on the App Store and Google Play. You can control multiple devices at once. If the app doesn't recognize the devices, check the Bluetooth or Wi-Fi connection and restart the app."
-		},
-		{
-			"id": "5",
+			"category": "cleanbug",
 			"questions": [
 				"How do I update the Cleanbug's software?",
 				"Can I update the Cleanbug manually?",
 				"How often are software updates released for the Cleanbug?",
-				"What should I do if the Cleanbug's update fails?"
+				"What should I do if the Cleanbug's update fails?",
+				"I want to update my Cleanbug",
+				"I want to update the Cleanbug",
+				"How can I update the Cleanbug?"
 			],
 			"answer": "To update the Cleanbug's software, use the app to check for updates and follow the instructions. Updates are released periodically. If an update fails, restart the Cleanbug and try again."
 		},
 		{
-			"id": "6",
-			"questions": [
-				"How do I clean the Windowfly's sensors?",
-				"Can I replace the Windowfly's cleaning pads?",
-				"How do I know when the Windowfly needs maintenance?",
-				"What should I do if the Windowfly's performance decreases?"
-			],
-			"answer": "Clean the Windowfly's sensors with a soft, dry cloth. The cleaning pads can be replaced as needed. The app will notify you when maintenance is required. If performance decreases, check for obstructions and clean the sensors."
-		},
-		{
-			"id": "7",
-			"questions": [
-				"How do I set up the Gardenbeetle for the first time?",
-				"Can the Gardenbeetle handle uneven terrain?",
-				"How do I adjust the cutting height on the Gardenbeetle?",
-				"What should I do if the Gardenbeetle gets stuck?"
-			],
-			"answer": "Set up the Gardenbeetle by following the instructions in the manual and app. It can handle uneven terrain to some extent. Adjust the cutting height using the app. If it gets stuck, check for obstacles and clear the path."
-		},
-		{
-			"id": "8",
+			"id": "3",
+			"category": "cleanbug",
 			"questions": [
 				"How do I reset the Cleanbug to factory settings?",
-				"Can I reset the Cleanbug without the app?",
 				"What happens when I reset the Cleanbug?",
-				"How do I know if the Cleanbug reset was successful?"
+				"How do I know if the Cleanbug reset was successful?",
+				"I want to reset my Cleanbug to factory settings"
 			],
 			"answer": "To reset the Cleanbug to factory settings, use the app or press the reset button on the device. Resetting will erase all settings and schedules. The app will confirm if the reset was successful."
 		},
 		{
-			"id": "9",
+			"id": "4",
+			"category": "cleanbug",
 			"questions": [
-				"How do I replace the Windowfly's battery?",
-				"Can I use third-party batteries with the Windowfly?",
-				"How long does the Windowfly's battery last?",
-				"What should I do if the Windowfly's battery drains quickly?"
-			],
-			"answer": "Replace the Windowfly's battery by following the instructions in the manual. It's recommended to use official batteries. The battery lasts for several cleaning cycles. If it drains quickly, check for battery health and replace if necessary."
-		},
-		{
-			"id": "10",
-			"questions": [
-				"How do I store the Gardenbeetle during winter?",
-				"Can the Gardenbeetle operate in the rain?",
-				"How do I protect the Gardenbeetle from extreme weather?",
-				"What should I do if the Gardenbeetle gets wet?"
-			],
-			"answer": "Store the Gardenbeetle in a dry, sheltered place during winter. It can operate in light rain, but it's best to avoid heavy rain. Protect it from extreme weather by storing it properly. If it gets wet, dry it thoroughly before using it again."
-		},
-		{
-			"id": "11",
-			"questions": [
-				"What should I do if the Cleanbug's wheels stop moving?",
-				"How do I fix the Cleanbug if it doesn't turn on?",
-				"Can I replace the Cleanbug's wheels myself?",
-				"What should I check if the Cleanbug's wheels are stuck?"
+				"What should do if the Cleanbug's wheels stop moving?",
+				"I want to replace the Cleanbug's wheels myself?",
+				"What should check if the Cleanbug's wheels are stuck?",
+				"My Cleanbug's wheels are broken",
+				"The wheels of my Cleanbug don't move"
 			],
 			"answer": "If the Cleanbug's wheels stop moving, check for obstructions and clean the wheels. If it doesn't turn on, ensure the battery is charged and properly connected. You can replace the wheels by following the manual. If the wheels are stuck, clean them and check for debris."
 		},
 		{
-			"id": "12",
-			"questions": [
-				"How do I fix the Windowfly if it doesn't start?",
-				"What should I do if the Windowfly's suction is weak?",
-				"Can I replace the Windowfly's motor?",
-				"What should I check if the Windowfly's sensors are not working?"
-			],
-			"answer": "If the Windowfly doesn't start, check the battery and connections. If the suction is weak, clean the filters and check for blockages. The motor can be replaced by following the manual. If the sensors are not working, clean them and ensure they are not obstructed."
-		},
-		{
-			"id": "13",
-			"questions": [
-				"What should I do if the Gardenbeetle's blades are dull?",
-				"How do I fix the Gardenbeetle if it doesn't move?",
-				"Can I replace the Gardenbeetle's blades myself?",
-				"What should I check if the Gardenbeetle's wheels are not turning?"
-			],
-			"answer": "If the Gardenbeetle's blades are dull, replace them following the manual. If it doesn't move, check the battery and connections. You can replace the blades yourself. If the wheels are not turning, clean them and check for obstructions."
-		},
-		{
-			"id": "14",
+			"id": "5",
+			"category": "cleanbug",
 			"questions": [
 				"How do I fix the Cleanbug if it makes a loud noise?",
-				"What should I do if the Cleanbug's brush stops spinning?",
-				"Can I replace the Cleanbug's brush?",
-				"What should I check if the Cleanbug's noise persists?"
+				"What should I check if the Cleanbug's noise persists?",
+				"My Cleanbug makes noise",
+				"My cleanbug makes a loud noise"
 			],
 			"answer": "If the Cleanbug makes a loud noise, check for debris in the brush and wheels. If the brush stops spinning, clean it and check for obstructions. You can replace the brush by following the manual. If the noise persists, contact customer support."
 		},
 		{
-			"id": "15",
+			"id": "6",
+			"category": "cleanbug",
 			"questions": [
-				"What should I do if the Windowfly's cleaning pads are worn out?",
-				"How do I fix the Windowfly if it doesn't move?",
-				"Can I replace the Windowfly's cleaning pads?",
-				"What should I check if the Windowfly's movement is erratic?"
-			],
-			"answer": "If the Windowfly's cleaning pads are worn out, replace them following the manual. If it doesn't move, check the battery and connections. You can replace the cleaning pads yourself. If the movement is erratic, clean the sensors and check for obstructions."
-		},
-		{
-			"id": "16",
-			"questions": [
-				"How do I fix the Gardenbeetle if it makes a strange noise?",
-				"What should I do if the Gardenbeetle's blades stop spinning?",
-				"Can I replace the Gardenbeetle's motor?",
-				"What should I check if the Gardenbeetle's noise persists?"
-			],
-			"answer": "If the Gardenbeetle makes a strange noise, check for debris in the blades and wheels. If the blades stop spinning, clean them and check for obstructions. The motor can be replaced by following the manual. If the noise persists, contact customer support."
-		},
-		{
-			"id": "17",
-			"questions": [
-				"What should I do if the Cleanbug's battery doesn't charge?",
-				"How do I fix the Cleanbug if it stops mid-cleaning?",
-				"Can I replace the Cleanbug's battery?",
-				"What should I check if the Cleanbug's charging issue persists?"
+				"What should I check if the Cleanbug's charging issue persists?",
+				"My Cleanbug's isn't charging",
+				"The Cleanbug's doesn't charge",
+				"My Cleanbug's battery doesn't work",
+				"The Cleanbug's battery isn't charging",
+				"My Cleanbug's battery is broken",
+				"The battery of my Cleanbug won't charge"
 			],
 			"answer": "If the Cleanbug's battery doesn't charge, check the charging station and connections. If it stops mid-cleaning, ensure the battery is fully charged. You can replace the battery by following the manual. If the charging issue persists, contact customer support."
 		},
 		{
-			"id": "18",
-			"questions": [
-				"How do I fix the Windowfly if it leaves streaks on windows?",
-				"What should I do if the Windowfly's cleaning solution runs out quickly?",
-				"Can I replace the Windowfly's cleaning solution tank?",
-				"What should I check if the Windowfly's streaking issue persists?"
-			],
-			"answer": "If the Windowfly leaves streaks, clean the pads and ensure they are not worn out. If the cleaning solution runs out quickly, check for leaks. You can replace the cleaning solution tank by following the manual. If the streaking issue persists, contact customer support."
-		},
-		{
-			"id": "19",
-			"questions": [
-				"What should I do if the Gardenbeetle's battery drains quickly?",
-				"How do I fix the Gardenbeetle if it doesn't return to the charging station?",
-				"Can I replace the Gardenbeetle's battery?",
-				"What should I check if the Gardenbeetle's battery issue persists?"
-			],
-			"answer": "If the Gardenbeetle's battery drains quickly, check for battery health and replace if necessary. If it doesn't return to the charging station, check the path and ensure there are no obstacles. You can replace the battery by following the manual. If the battery issue persists, contact customer support."
-		},
-		{
-			"id": "20",
+			"id": "7",
+			"category": "cleanbug",
 			"questions": [
 				"How do I fix the Cleanbug if it doesn't connect to Wi-Fi?",
-				"What should I do if the Cleanbug's app doesn't sync?",
 				"Can I reset the Cleanbug's Wi-Fi settings?",
-				"What should I check if the Cleanbug's Wi-Fi issue persists?"
+				"What should I check if the Cleanbug's Wi-Fi issue persists?",
+				"My Cleanbug cannot connect to Wifi",
+				"My Cleanbug has no Wifi",
+				"The Wifi of my Cleanbug doesn't work",
+				"How do I fix the Cleanbug if it doesn't connect to Wifi?",
+				"Can I reset the Cleanbug's Wifi settings?",
+				"What should I check if the Cleanbug's Wifi issue persists?"
 			],
 			"answer": "If the Cleanbug doesn't connect to Wi-Fi, check the network settings and ensure the password is correct. If the app doesn't sync, restart the app and the Cleanbug. You can reset the Wi-Fi settings by following the manual. If the Wi-Fi issue persists, contact customer support."
 		},
 		{
-			"id": "21",
+			"id": "8",
+			"category": "cleanbug",
 			"questions": [
-				"What should I do if the Cleanbug doesn't start?",
-				"How do I fix the Cleanbug if it won't turn on?",
 				"Why isn't my Cleanbug responding?",
-				"What should I check if the Cleanbug doesn't power up?",
-				"My Cleanbug doesn't work",
-				"My Cleanbug is broken",
-				"My Cleanbug is not working"
+				"My Cleanbug doesn't start",
+				"My Cleanbug is not starting",
+				"Why is my Cleanbug not starting?"
 			],
 			"answer": "If the Cleanbug doesn't start, check the battery and ensure it is fully charged. Make sure the power button is pressed and held for a few seconds. If it still doesn't turn on, try resetting the device or contact customer support."
 		},
 		{
-			"id": "22",
-			"questions": [
-				"What should I do if the Gardenbeetle doesn't start?",
-				"How do I fix the Gardenbeetle if it won't turn on?",
-				"Why isn't my Gardenbeetle responding?",
-				"What should I check if the Gardenbeetle doesn't power up?",
-				"My Gardenbeetle doesn't work",
-				"My Gardenbeetle is broken",
-				"My Gardenbeetle is not working"
-			],
-			"answer": "If the Gardenbeetle doesn't start, check the battery and ensure it is fully charged. Make sure the power button is pressed and held for a few seconds. If it still doesn't turn on, try resetting the device or contact customer support."
-		},
-		{
-			"id": "23",
-			"questions": [
-				"What should I do if the Windowfly doesn't start?",
-				"How do I fix the Windowfly if it won't turn on?",
-				"Why isn't my Windowfly responding?",
-				"What should I check if the Windowfly doesn't power up?",
-				"My Windowfly doesn't work",
-				"My Windowfly is broken",
-				"My Windofly is not working"
-			],
-			"answer": "If the Windowfly doesn't start, check the battery and ensure it is fully charged. Make sure the power button is pressed and held for a few seconds. If it still doesn't turn on, try resetting the device or contact customer support."
-		},
-		{
-			"id": "24",
-			"questions": [
-				"How do I contact customer support?",
-				"Can I talk to customer support?",
-				"I want to talk to customer support",
-				"I want to contact customer support"
-			],
-			"answer": "Your request has been sent to customer support. They will get back to you shortly. If you need immediate assistance, please visit the BUGLAND website for more contact options. Thank you for your patience."
-		},
-		{
-			"id": "25",
+			"id": "9",
+			"category": "cleanbug",
 			"questions": [
 				"Why does my Cleanbug stop on the stairs?",
 				"My Cleanbug stopped on the stairs",
@@ -263,67 +113,229 @@
 			"answer": "Ensure the stairs are free of obstacles and the Cleanbug's sensors are clean. If the issue persists, contact support for a sensor calibration guide or spare parts."
 		},
 		{
-			"id": "26",
+			"id": "10",
+			"category": "cleanbug",
+			"questions": [
+				"Preventive care for Cleanbug.",
+				"How can I clean my Cleanbug?",
+				"Clean my Cleanbug",
+				"How can I care for my Cleanbug",
+				"How to prevent issues with my Cleanbug?",
+				"How to prevent problems with my Cleanbug?"
+			],
+			"answer": "Clean brushes weekly, update firmware monthly, and avoid wet surfaces unless the ‘Mop Mode’ is activated."
+		},
+		{
+			"id": "11",
+			"category": "cleanbug",
+			"questions": [
+				"My Cleanbug is broken",
+				"Why is my Cleanbug broken",
+				"My Cleanbug broke",
+				"My Cleanbug doesn't work",
+				"Why is my Cleanbug not working",
+				"My Cleanbug won't work",
+				"I have a problem with my Cleanbug",
+				"I have an issue with my Cleanbug",
+				"There seems to be an issue with my Cleanbug",
+				"My Cleanbug is not functioning correctly"
+			],
+			"answer": "I am sincerely sorry about that. Hopefully the issue with your Cleanbug is not severe. Can you elaborate on your problem a little more, please?"
+		},
+		{
+			"id": "12",
+			"category": "windowfly",
+			"questions": [
+				"What should I check if the Windowfly's movement is erratic?"
+			],
+			"answer": "If the Windowfly's cleaning pads are worn out, replace them following the manual. If it doesn't move, check the battery and connections. You can replace the cleaning pads yourself. If the movement is erratic, clean the sensors and check for obstructions."
+		},
+		{
+			"id": "13",
+			"category": "windowfly",
+			"questions": [
+				"How frequently should the Windowfly undergo maintenance?",
+				"What should I do if the Windowfly gets stuck?"
+			],
+			"answer": "The Windowfly cleans windows autonomously by vacuuming and wiping. It can reach high windows as well. Regular maintenance is recommended every 3 months. If the Windowfly gets stuck, restart it or check the sensors."
+		},
+		{
+			"id": "14",
+			"category": "windowfly",
+			"questions": [
+				"How do I replace the Windowfly's battery?",
+				"How long does the Windowfly's battery last?",
+				"What should I do if the Windowfly's battery drains quickly?"
+			],
+			"answer": "Replace the Windowfly's battery by following the instructions in the manual. It's recommended to use official batteries. The battery lasts for several cleaning cycles. If it drains quickly, check for battery health and replace if necessary."
+		},
+		{
+			"id": "15",
+			"category": "windowfly",
+			"questions": [
+				"What should I check if the Windowfly's sensors are not working?"
+			],
+			"answer": "If the Windowfly doesn't start, check the battery and connections. If the suction is weak, clean the filters and check for blockages. The motor can be replaced by following the manual. If the sensors are not working, clean them and ensure they are not obstructed."
+		},
+		{
+			"id": "16",
+			"category": "windowfly",
+			"questions": [
+				"What should I check if the Windowfly's streaking issue persists?"
+			],
+			"answer": "If the Windowfly leaves streaks, clean the pads and ensure they are not worn out. If the cleaning solution runs out quickly, check for leaks. You can replace the cleaning solution tank by following the manual. If the streaking issue persists, contact customer support."
+		},
+		{
+			"id": "17",
+			"category": "windowfly",
+			"questions": [
+				"Why isn't my Windowfly responding?",
+				"My Windowfly doesn't work",
+				"My Windowfly is broken",
+				"My Windowfly is not working"
+			],
+			"answer": "If the Windowfly doesn't start, check the battery and ensure it is fully charged. Make sure the power button is pressed and held for a few seconds. If it still doesn't turn on, try resetting the device or contact customer support."
+		},
+		{
+			"id": "18",
+			"category": "windowfly",
 			"questions": [
 				"My Windowfly is stuck on the window. How do I remove it safely from the window without breaking it?",
-				"Windowfly stuck to the window. Help!",
-				"How do I safely detach Windowfly?",
 				"Windowfly removal without breaking it?"
 			],
 			"answer": "Use the emergency release button on the device or the app’s ‘Manual Control’ mode. Avoid pulling forcefully to prevent breakage."
 		},
 		{
-			"id": "27",
+			"id": "19",
+			"category": "windowfly",
+			"questions": ["How do I prevent streaks with Windowfly?"],
+			"answer": "Streaks often come from dirty squeegees. Replace the cleaning pad and ensure the water tank uses distilled water."
+		},
+		{
+			"id": "20",
+			"category": "windowfly",
 			"questions": [
-				"Why does the Gardenbeetle struggle to remove weeds?",
-				"Gardenbeetle won’t remove weeds.",
-				"Why is the Gardenbeetle bad at clearing weeds?",
-				"Gardenbeetle weed-removal issue."
+				"My Windowfly is broken",
+				"Why is my Windowfly broken",
+				"My Windowfly broke",
+				"I have a problem with my Windowfly",
+				"I have an issue with my Windowfly",
+				"There seems to be an issue with my Windowfly",
+				"My Windowfly is not functioning correctly"
 			],
+			"answer": "I am sincerely sorry about that. Hopefully the issue with your Windowfly is not severe. Can you elaborate on your problem a little more, please?"
+		},
+		{
+			"id": "21",
+			"category": "gardenbeetle",
+			"questions": ["Gardenbeetle weed-removal issue."],
 			"answer": "Check if the blade is sharp and debris-free. For persistent weeds, adjust the ‘Weed Sensitivity’ setting in the app."
 		},
 		{
-			"id": "28",
-			"questions": [
-				"How do I program Cleanbug for multi-floor cleaning?",
-				"Multi-floor setup for Cleanbug?",
-				"Can Cleanbug clean multiple floors?",
-				"Steps for programming Cleanbug on multiple levels."
-			],
-			"answer": "Map each floor separately via the app’s ‘Multi-Floor Setup’ guide. Ensure the device is fully charged before switching floors."
-		},
-		{
-			"id": "29",
-			"questions": [
-				"Why won’t my Gardenbeetle connect to the app? Connection issues.",
-				"Gardenbeetle app connection not working.",
-				"Why can’t I connect Gardenbeetle to Bluetooth?",
-				"Troubleshooting Gardenbeetle connection."
-			],
+			"id": "22",
+			"category": "gardenbeetle",
+			"questions": ["Troubleshooting Gardenbeetle connection."],
 			"answer": "Restart the device and ensure Bluetooth is enabled. If issues persist, reset the Gardenbeetle’s network settings via the power button (hold for 10 seconds)."
 		},
 		{
-			"id": "30",
+			"id": "23",
+			"category": "gardenbeetle",
 			"questions": [
-				"How do I order original spare parts?",
-				"Where can I buy spare parts?",
-				"Ordering Bugland parts.",
-				"Get original spare parts for my device."
+				"What should I check if the Gardenbeetle's wheels are not turning?"
 			],
-			"answer": "Visit our Spare Parts Portal(https://bugland.com/parts) or call our support team. Provide your device’s serial number for faster service."
+			"answer": "If the Gardenbeetle's blades are dull, replace them following the manual. If it doesn't move, check the battery and connections. You can replace the blades yourself. If the wheels are not turning, clean them and check for obstructions."
+		},
+		{
+			"id": "24",
+			"category": "gardenbeetle",
+			"questions": ["What should I do if the Gardenbeetle gets wet?"],
+			"answer": "Store the Gardenbeetle in a dry, sheltered place during winter. It can operate in light rain, but it's best to avoid heavy rain. Protect it from extreme weather by storing it properly. If it gets wet, dry it thoroughly before using it again."
+		},
+		{
+			"id": "25",
+			"category": "gardenbeetle",
+			"questions": ["What should I do if the Gardenbeetle gets stuck?"],
+			"answer": "Set up the Gardenbeetle by following the instructions in the manual and app. It can handle uneven terrain to some extent. Adjust the cutting height using the app. If it gets stuck, check for obstacles and clear the path."
+		},
+		{
+			"id": "26",
+			"category": "gardenbeetle",
+			"questions": [
+				"How do I fix the Gardenbeetle if it makes a strange noise?",
+				"What should I check if the Gardenbeetle's noise persists?"
+			],
+			"answer": "If the Gardenbeetle makes a strange noise, check for debris in the blades and wheels. If the blades stop spinning, clean them and check for obstructions. The motor can be replaced by following the manual. If the noise persists, contact customer support."
+		},
+		{
+			"id": "27",
+			"category": "gardenbeetle",
+			"questions": [
+				"How does the Gardenbeetle work?",
+				"How often should the Gardenbeetle mow the lawn?",
+				"What should I do if the Gardenbeetle stops charging?"
+			],
+			"answer": "The Gardenbeetle autonomously mows the lawn and removes weeds. It can be programmed to mow regularly as needed. If it stops charging, check the charging station and connections."
+		},
+		{
+			"id": "28",
+			"category": "gardenbeetle",
+			"questions": [
+				"Can I replace the Gardenbeetle's battery?",
+				"What should I check if the Gardenbeetle's battery issue persists?"
+			],
+			"answer": "If the Gardenbeetle's battery drains quickly, check for battery health and replace if necessary. If it doesn't return to the charging station, check the path and ensure there are no obstacles. You can replace the battery by following the manual. If the battery issue persists, contact customer support."
+		},
+		{
+			"id": "29",
+			"category": "gardenbeetle",
+			"questions": [
+				"Why isn't my Gardenbeetle responding?",
+				"My Gardenbeetle doesn't work",
+				"My Gardenbeetle is broken",
+				"My Gardenbeetle is not working"
+			],
+			"answer": "If the Gardenbeetle doesn't start, check the battery and ensure it is fully charged. Make sure the power button is pressed and held for a few seconds. If it still doesn't turn on, try resetting the device or contact customer support."
+		},
+		{
+			"id": "30",
+			"category": "gardenbeetle",
+			"questions": [
+				"My Gardenbeetle is broken",
+				"Why is my Gardenbeetle broken",
+				"My Gardenbeetle broke",
+				"I have a problem with my Gardenbeetle",
+				"I have an issue with my Gardenbeetle",
+				"There seems to be an issue with my Gardenbeetle",
+				"My Gardenbeetle is not functioning correctly"
+			],
+			"answer": "I am sincerely sorry about that. Hopefully the issue with your Gardenbeetle is not severe. Can you elaborate on your problem a little more, please?"
 		},
 		{
 			"id": "31",
+			"category": "app",
 			"questions": [
-				"Has my device warranty?",
-				"How do I know if my device is under warranty?",
-				"Warranty status check for Bugland devices.",
-				"Is my device still covered by warranty?"
+				"How do I connect devices to the app?",
+				"Which app is required for BUGLAND products?",
+				"Is it possible to control multiple devices simultaneously?",
+				"What should I do if the app fails to recognize the devices?",
+				"Where can I find the app?"
 			],
-			"answer": "Warranty status is linked to your purchase date. Submit a request at (https://bugland.com/warranty) with your order number."
+			"answer": "Connect the devices using the BUGLAND app, available on the App Store and Google Play. You can control multiple devices at once. If the app doesn't recognize the devices, check the Bluetooth or Wi-Fi connection and restart the app."
 		},
 		{
 			"id": "32",
+			"category": "support",
+			"questions": [
+				"How do I contact customer support?",
+				"Can I talk to customer support?",
+				"I want to talk to customer support",
+				"I want to contact customer support"
+			],
+			"answer": "Your request has been sent to customer support. They will get back to you shortly. If you need immediate assistance, please visit the BUGLAND website for more contact options. Thank you for your patience."
+		},
+		{
+			"id": "33",
+			"category": "support",
 			"questions": [
 				"How do I escalate an unresolved issue?",
 				"Escalate my ticket to a manager.",
@@ -333,7 +345,8 @@
 			"answer": "Reply to your support ticket with ‘ESCALATE’ in the subject line, or ask the chatbot to connect you to a supervisor."
 		},
 		{
-			"id": "33",
+			"id": "34",
+			"category": "support",
 			"questions": [
 				"Why hasn’t my support ticket been answered?",
 				"No reply from support. What to do?",
@@ -342,88 +355,60 @@
 			],
 			"answer": "We aim to respond within 24 hours. Check your spam folder, or use the chatbot to resend your ticket to our team."
 		},
-
-		{
-			"id": "34",
-			"questions": [
-				"How do I maintain my Cleanbug to prevent breakdowns?",
-				"Best maintenance tips for Cleanbug?",
-				"How to keep my Cleanbug in good shape?",
-				"Preventive care for Cleanbug."
-			],
-			"answer": "Clean brushes weekly, update firmware monthly, and avoid wet surfaces unless the ‘Mop Mode’ is activated."
-		},
 		{
 			"id": "35",
+			"category": "support",
 			"questions": [
-				"What’s the best way to clean Windowfly’s sensors?",
-				"How do I clean Windowfly sensors?",
-				"Windowfly sensor cleaning method.",
-				"Tips for cleaning Windowfly sensors."
-			],
-			"answer": "Wipe sensors gently with a microfiber cloth. Avoid liquids—use compressed air for stubborn dirt."
-		},
-
-		{
-			"id": "36",
-			"questions": [
-				"I need human help NOW. Connect me to an agent or your supervisor.",
-				"Connect me to a human agent.",
 				"I want to speak to a supervisor.",
-				"Can I talk to a real person now?",
-				"Please connect me to a live agent.",
 				"I can't explain the problem"
 			],
 			"answer": "Transferring you to a live agent. Wait times are currently under 5 minutes. Thank you for your patience!"
 		},
 		{
-			"id": "37",
+			"id": "36",
+			"category": "other",
 			"questions": [
-				"Why does the Windowfly leave streaks on windows?",
-				"Windowfly cleaning streak issue.",
-				"Streaks after using Windowfly why?",
-				"How do I prevent streaks with Windowfly?"
+				"How do I order original spare parts?",
+				"Where can I buy spare parts?",
+				"Ordering Bugland parts.",
+				"Get original spare parts for my device."
 			],
-			"answer": "Streaks often come from dirty squeegees. Replace the cleaning pad and ensure the water tank uses distilled water."
+			"answer": "Visit our Spare Parts Portal(https://bugland.com/parts) or call our support team. Provide your device’s serial number for faster service."
+		},
+		{
+			"id": "37",
+			"category": "other",
+			"questions": [
+				"Has my device warranty?",
+				"How do I know if my device is under warranty?",
+				"Warranty status check for Bugland devices.",
+				"Is my device still covered by warranty?"
+			],
+			"answer": "Warranty status is linked to your purchase date. Submit a request at (https://bugland.com/warranty) with your order number."
 		},
 		{
 			"id": "38",
-			"questions": [
-				"I have a problem with my cleanbug",
-				"I have a problem with my windowfly",
-				"I have a problem with my Gardenbeetle"
-			],
-			"answer": "Can you explain to me the problem?"
-		},
-		{
-			"id": "39",
-			"questions": [
-				"My Cleanbug is not cleaning the ground?",
-				"Why is my Cleanbug not cleaning?",
-				"I have a problem with my Cleanbug not cleaning",
-				"My Cleanbug is not cleaning"
-			],
-			"answer": "If the Cleanbug is not cleaning, there might be a hardware or software issue. Clean brushes weekly, update firmware monthly, and avoid wet surfaces unless the ‘Mop Mode’ is activated. If the Cleanbug doesn't start, check the battery and ensure it is fully charged. Make sure the power button is pressed and held for a few seconds. If it still doesn't turn on, try resetting the device or contact customer support."
-		},
-		{
-			"id": "40",
+			"category": "other",
 			"questions": ["Asshole Fuck you Fucking Bitch Fuckface idiot"],
 			"answer": "Get fucked."
 		},
 		{
-			"id": "41",
-			"questions": ["You donkey "],
+			"id": "39",
+			"category": "other",
+			"questions": ["You donkey"],
 			"answer": "You are an idiot sandwich."
 		},
 
 		{
-			"id": "42",
+			"id": "40",
+			"category": "other",
 			"questions": ["I'll whoop your ass!"],
 			"answer": "You girlfriend look like my mom!"
 		},
 
 		{
-			"id": "43",
+			"id": "41",
+			"category": "other",
 			"questions": ["Did you cut your hair?"],
 			"answer": "I hate you >:("
 		}
@@ -431,37 +416,38 @@
 	"greetings": [
 		{
 			"id": "1",
+			"category": "other",
 			"questions": ["Hello What's up. Greetings Hi there Hey! Welcome! Hiya!"],
 			"answer": "Hello, I am Donkeybot, the virtual assistant of BUGLAND Ltd. Let me know if I can help you with anything!"
 		},
 		{
 			"id": "2",
+			"category": "other",
 			"questions": ["Howdy"],
 			"answer": "Howdy, I am Donkeybot, the virtual assistant of BUGLAND Ltd. Let me know if I can help you with anything!"
 		},
 		{
 			"id": "3",
+			"category": "other",
 			"questions": ["What's up?"],
 			"answer": "Not much, let me know if I can help you with anything!"
 		},
 		{
 			"id": "4",
-			"questions": ["How are you"],
-			"answer": "Im doing great, let me know if I can help you with anything!"
-		},
-		{
-			"id": "5",
+			"category": "other",
 			"questions": ["Nice to see you!"],
 			"answer": "Nice to see you too! Let me know if I can help you with anything!"
 		},
 
 		{
-			"id": "6",
+			"id": "5",
+			"category": "other",
 			"questions": ["Hello there"],
 			"answer": "Hello, I am Donkeybot, the virtual assistant of BUGLAND Ltd. Let me know if I can help you with anything!"
 		},
 		{
-			"id": "7",
+			"id": "6",
+			"category": "other",
 			"questions": ["Hello and hi, Donkeybot"],
 			"answer": "Hey! Nice to see you. I am the virtual assistant of BUGLAND Ltd. Let me know how I can help you today."
 		}
@@ -491,7 +477,7 @@
 			"up",
 			"hey",
 			"world",
-			"how"
+			"How"
 		],
 		"greetings": [
 			"a",

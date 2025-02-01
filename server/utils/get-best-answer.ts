@@ -14,13 +14,63 @@ export const getBestAnswer = (
 	question: string,
 	questions: Question[],
 	dictionary: string[],
-	messageType: MessageType
+	messageType: MessageType,
+	catalog: {
+		id: string;
+		questions: string[];
+		category: string;
+	}[]
 ) => {
 	const cleanedQuestion = cleanString(question);
 	const tokenizedQuestion = tokenize(cleanedQuestion, messageType);
 	console.log("originalTerms", tokenizedQuestion);
 	const correctedTerms = correctSentence(tokenizedQuestion, dictionary);
 	console.log("correctedTerms", correctedTerms);
+
+	let category = "other";
+
+	let filteredCatalog = catalog.slice();
+
+	if (correctedTerms.includes("gardenbeetle")) {
+		category = "gardenbeetle";
+	} else if (correctedTerms.includes("cleanbug")) {
+		category = "cleanbug";
+	} else if (correctedTerms.includes("windowfly")) {
+		category = "windowfly";
+	} else if (correctedTerms.includes("support")) {
+		category = "support";
+	} else if (correctedTerms.includes("app")) {
+		category = "app";
+	}
+	console.log("----BEFORE----");
+	console.log("category", category);
+	console.log("questions", questions.length);
+	console.log("Catalog", catalog.length);
+	console.log("filteredCatalog", filteredCatalog.length);
+	
+	for(let i = 0; i < filteredCatalog.length; i++) {
+		if (filteredCatalog[i].category == category) {
+			filteredCatalog.splice(i,1);
+			i--;
+		}
+	}
+
+	
+
+	for(let i = 0; i < filteredCatalog.length; i++) {
+		for(let j = 0; j < questions.length; j++) {
+			if (filteredCatalog[i].id == questions[j].id) {
+				questions.splice(j,1);
+				j--;
+			}
+		}
+	} 
+	console.log("----AFTER----");
+	console.log("category", category);
+	console.log("questions", questions.length);
+	console.log("Catalog", catalog.length);
+	console.log("filteredCatalog", filteredCatalog.length);
+
 	const preprocessed = stem(correctedTerms);
 
 	const questionTF = calculateTF(new Set(preprocessed));
