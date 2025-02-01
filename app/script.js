@@ -1,7 +1,6 @@
 function start() {
 	const socket = new WebSocket("ws://localhost:8000");
 
-	//let responses = document.getElementById("balls");
 	let userRequestText = document.getElementById("longlongman");
 	let userRequestButton = document.getElementById("cum");
 
@@ -31,6 +30,7 @@ function start() {
 
 	userRequestButton.addEventListener("click", () => {
 		if (socket.readyState === WebSocket.OPEN && userRequestText.value) {
+
 			socket.send(userRequestText.value);
 			console.log("Message sent to server: " + userRequestText.value);
 			createChatElement(userRequestText.value, "user");
@@ -38,6 +38,10 @@ function start() {
 			writingIndicator.style.visibility = "visible";
 		} else {
 			console.log("WebSocket is not open.");
+			createChatElement(
+				"💡 Uh oh, seems like Donkeybot is having a stroke! 😔 Try again later 💡",
+				"system"
+			);
 		}
 	});
 }
@@ -57,7 +61,6 @@ function createChatElement(text, origin) {
 		case "server":
 			className = "boob2";
 			text = getAngry(text);
-			bzzzzt();
 			break;
 		case "system":
 			className = "donkeybrain";
@@ -91,12 +94,14 @@ function getAngry(text) {
 	console.log(result);
 	let id = result[0];
 
-	if (id == "36" || id == "37" || id == "38" || (id == "39" && !id)) {
+	if (id == "43" || id == "44" || id == "45" || id == "46") {
 		let element = document.getElementById("img-evil");
 		element.style.visibility = "visible";
+		bzzzzt(true);
 	} else {
 		let element = document.getElementById("img-evil");
 		element.style.visibility = "hidden";
+		bzzzzt();
 	}
 
 	if (result.length > 1) {

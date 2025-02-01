@@ -51,11 +51,14 @@
 	const inputField = document.getElementById("longlongman");
 	const sendButton = document.getElementById("cum");
 
-	function bzzzzt() {
+	function bzzzzt(evil) {
 		let min = 1;
 		let max = 4;
 		let randomInt = Math.floor(Math.random() * (max - min + 1)) + min;
 		let sound = new Audio("resources/" + randomInt + ".mp3");
+		if (evil) {
+			sound = new Audio("resources/angry_bot.mp3");
+		}
 		sound.play().catch(function (error) { console.log(error); });
 	}
 
