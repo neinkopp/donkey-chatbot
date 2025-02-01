@@ -13,16 +13,15 @@
 
 	<div class="back" id="back">
 		<div class="thembeautifuleyes">
-			<p class="title">BUGLAND Ltd's Personal Assistant</p>
-			<img src="resources/bugland.png" alt="BOT">
+			<img src="resources/bugland.png" alt="BOT" class="bot">
 		</div>
 
 
 
-
-		<img class="donkeytron" src="resources/roboter rework blue.svg" alt="no image :c">
+		
+		<img class="donkeytron" id='img-default' src="resources/roboter rework blue.svg" alt="no image :c">
 		<img class="donkeyoff" id="img-off" src="resources/roboter less light.svg" alt="no lights :c">
-
+		<img class="evilbot" id="img-evil" src="resources/evildonkey.svg" alt="I'm so fucking angry maaan!">
 
 		<div class="chest">
 			<div class="balls" id="balls"></div>
@@ -31,10 +30,8 @@
 					responding...
 				</div>
 				<div class="tummy">
-
 					<div class="peepee" id="peepee">
-						<input class="longlongman" id="longlongman"
-							placeholder="Type in your question for DonkeyBot...">
+						<input class="longlongman" id="longlongman" placeholder="Type in your question for DonkeyBot...">
 						<button class="cum" id="cum">send</button>
 					</div>
 
@@ -47,6 +44,9 @@
 
 <script src="script.js"></script>
 <script>
+	let element = document.getElementById('img-evil');
+	element.style.visibility = 'hidden';
+
 	start(); //enter 
 	const inputField = document.getElementById("longlongman");
 	const sendButton = document.getElementById("cum");

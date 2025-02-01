@@ -1,7 +1,7 @@
 function start() {
 	const socket = new WebSocket("ws://localhost:8000");
 
-	let responses = document.getElementById("balls");
+	//let responses = document.getElementById("balls");
 	let userRequestText = document.getElementById("longlongman");
 	let userRequestButton = document.getElementById("cum");
 
@@ -56,6 +56,7 @@ function createChatElement(text, origin) {
 			break;
 		case "server":
 			className = "boob2";
+			text = getAngry(text);
 			bzzzzt();
 			break;
 		case "system":
@@ -82,3 +83,33 @@ const fillChatElement = async (text, textBox, origin) => {
 		document.getElementById("balls").scrollTop = 99999999;
 	}
 };
+
+
+function getAngry(text){
+
+	let splitText = text;
+	let result = splitText.split("|");
+
+	console.log(result);
+	let id = (result[0]);
+
+	if(id=="36"||id=="37"||id=="38" ||id=="39" && !id){  
+		let element = document.getElementById('img-evil');
+		element.style.visibility = 'visible';
+	}
+	else{
+	let element = document.getElementById('img-evil');
+	element.style.visibility = 'hidden';
+	}
+	
+
+	if(result.length>1){
+		return result[1];
+	}
+	else{
+		return text;
+	}
+
+}
+
+
