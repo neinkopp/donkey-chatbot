@@ -13,7 +13,10 @@ const tokenizer = new Tokenizer();
 
 export const cleanString = (text: string) => {
 	// lowercase and remove punctuation
-	const lower = text.toLowerCase().replace(/[^\w\s]/g, "");
+	//const lower = text.toLowerCase().replace(/[^\w\s]/g, "");
+
+	//also removes the first letter after the ' 
+	const lower = text.toLowerCase().replace(/'./g, "").replace(/[^\w\s]/g, "");
 	return lower;
 };
 

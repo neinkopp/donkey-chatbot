@@ -49,7 +49,10 @@ const calculateTFIDFPerQuestion = (
 			vector[term] = value * idf.get(term)!;
 		});
 		tfidfs.set(id, vector);
+		console.log(id, vector);
 	});
+	console.log("------");
+	console.log(tfidfs);
 	return tfidfs;
 };
 
