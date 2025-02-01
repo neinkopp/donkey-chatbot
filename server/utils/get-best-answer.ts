@@ -46,6 +46,6 @@ export const getBestAnswer = (
 	if (bestMatchId === null) {
 		return null;
 	} else {
-		return questions.find(({ id }) => id === bestMatchId)!.id;
+		return questions.find(({ id }) => id === bestMatchId?.split(".")[0])!.id;
 	}
 };

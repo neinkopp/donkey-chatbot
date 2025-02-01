@@ -40,7 +40,7 @@ const calculateTFIDFPerQuestion = (
 	messageType: MessageType
 ): Map<string, TermVector> => {
 	const tfidfs = new Map<string, TermVector>();
-	questions.forEach(({ id, question }) => {
+	questions.forEach(({ id, question }, index) => {
 		const preprocessed = preprocess(question, messageType);
 		const terms = new Set(preprocessed);
 		const tf = calculateTF(terms);
@@ -48,7 +48,7 @@ const calculateTFIDFPerQuestion = (
 		tf.forEach((value, term) => {
 			vector[term] = value * idf.get(term)!;
 		});
-		tfidfs.set(id, vector);
+		tfidfs.set(`${id}.${index}`, vector);
 	});
 	return tfidfs;
 };
