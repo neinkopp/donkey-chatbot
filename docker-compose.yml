@@ -1,12 +1,8 @@
-# Use root/example as user/password credentials
-version: "3.1"
-
+version: "3"
 services:
-  db:
-    image: mysql
-    restart: always
+  donkey-chatbot:
+    build:
+      context: .
+      dockerfile: Dockerfile
     ports:
-      - "3306:3306"
-    environment:
-      MYSQL_ROOT_PASSWORD: example
-    # (this is just an example, not intended to be a production configuration)
+      - "8000:8000"
