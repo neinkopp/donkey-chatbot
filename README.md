@@ -1,49 +1,38 @@
-Aufgabenfelder:
-	
-    Frontend Design
-        Jellie 
-	
-    Frontend-Backend-Communication (Websockets)
-        Jaro
-	
-    "Authentication"
-     wir 4 
-     
-	Backend-Database-Communication
-     wir 4
-	
-    TF-IDF-Algorithm
-		Jakob
-    
-    Levensthein-Distance 
-        Katerina 
-	
-    Fragenkatalog (20 Fragen und Antworten, am besten mit Variationen)
-		Jaro
+# Donkey Chatbot
 
-    use case diagramm
-     Katerina 
+## Overview
+Donkey Chatbot is a rule-based conversational system that does not utilize AI or deep learning. Instead, it relies on **TF-IDF with Cosine Similarity** for response retrieval and **Levenshtein Distance** for grammar correction. The chatbot is powered by a curated **question-answer catalog** and operates using a **Deno-based backend** with WebSockets for real-time communication.
+This project was developed at **ITECH Wilhelmsburg** as part of a collaborative team effort for **Challenge 2 in the first school block**.
 
+## Features
+- **TF-IDF Algorithm**: Identifies the most relevant responses based on term frequency and cosine similarity.
+- **Levenshtein Distance**: Implements a spell-checking mechanism for improved user input processing.
+- **WebSockets Communication**: Enables seamless interaction between frontend and backend.
+- **Custom Question Catalog**: Includes a set of predefined questions and responses with variations.
+- **Authentication**: Basic authentication mechanism for access control.
+- **Modern Frontend Design**: User-friendly interface for chatbot interaction.
 
+## Setup & Installation
+### Prerequisites
+Ensure you have **Deno** installed. You can install it using:
+```powershell
+irm https://deno.land/install.ps1 | iex
+```
+Or, if the above command does not work:
+```powershell
+winget install DenoLand.Deno
+```
 
-Chatverzögerung
-Branding auf Website
-Weitere Tests
+### Installing Dependencies
+```sh
+deno install
+```
 
-Präsentation vorbereiten
+### Running the Server
+```sh
+deno task dev
+```
 
-Andere Chatbots:
-O2 Aura
-
-
-Requirements:
-- Install Deno über Powershell:
-	irm https://deno.land/install.ps1 | iex
-	-ODER, falls nicht funktioniert-
-	winget install DenoLand.Deno
-- Dependencies installieren:
-	deno install
-- Server starten:
-    deno task dev
-
-https://docs.deno.com/runtime/getting_started/installation/
+## References
+- [Deno Installation Guide](https://docs.deno.com/runtime/getting_started/installation/)
+- [O2 Aura](https://www.o2.de/aura) (Example of another chatbot)
