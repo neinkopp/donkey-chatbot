@@ -1,8 +1,8 @@
 function start() {
 	const socket = new WebSocket("ws://localhost:8000");
 
-	let userRequestText = document.getElementById("longlongman");
-	let userRequestButton = document.getElementById("cum");
+	let userRequestText = document.getElementById("inp-input");
+	let userRequestButton = document.getElementById("btn-send");
 
 	let writingIndicator = document.getElementById("write-indicator");
 
@@ -56,18 +56,18 @@ function createChatElement(text, origin) {
 
 	switch (origin) {
 		case "user":
-			className = "boob1";
+			className = "userMessage";
 			break;
 		case "server":
-			className = "boob2";
+			className = "botMessage";
 			text = getAngry(text);
 			break;
 		case "system":
-			className = "donkeybrain";
+			className = "systemMessage";
 			break;
 	}
 	messageElement.className = className;
-	document.getElementById("balls").appendChild(messageElement);
+	document.getElementById("chatCon").appendChild(messageElement);
 	fillChatElement(text, messageElement, origin);
 }
 
@@ -79,11 +79,11 @@ const fillChatElement = async (text, textBox, origin) => {
 		for (let i = 1; i < words.length; i++) {
 			await delay(100);
 			textBox.textContent = textBox.textContent + " " + words[i];
-			document.getElementById("balls").scrollTop = 99999999;
+			document.getElementById("chatCon").scrollTop = 99999999;
 		}
 	} else {
 		textBox.textContent = text;
-		document.getElementById("balls").scrollTop = 99999999;
+		document.getElementById("chatCon").scrollTop = 99999999;
 	}
 };
 

@@ -12,7 +12,7 @@
 	}
 	100% {
 		opacity: 0.1;
-	}
+	} 
 }
 
 .back {
@@ -24,7 +24,7 @@
 	flex-direction: column;
 }
 
-.thembeautifuleyes {
+.header {
 	display: flex;
 	background-color: rgb(36, 46, 65);
 	justify-content: flex-end;
@@ -103,7 +103,7 @@
 	/*opacity: 0%;*/
 }
 
-.chest {
+.content {
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-end;
@@ -112,14 +112,14 @@
 
 }
 
-.bottom {
+.chatBoxContainer {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 }
 
-.tummy {
+.chatBox {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -134,14 +134,14 @@
 	align-items: flex-start;
 }
 
-.peepee {
+.inputSendMerge {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	gap: 1em;
 }
 
-.balls {
+.chatContainer {
 	display: flex;
 	justify-content: flex-start;
 	flex-direction: column;
@@ -154,7 +154,7 @@
 	opacity: 0;
 }
 
-.boob1 {
+.userMessage {
 	background-color: #294a6a;
 	color: black;
 	width: 25em;
@@ -167,7 +167,7 @@
 	color: white;
 }
 
-.boob2 {
+.botMessage {
 	background-color: #000a48;
 	color: black;
 	width: 25em;
@@ -179,7 +179,7 @@
 	color: white;
 }
 
-.donkeybrain {
+.systemMessage {
 	background-color: #a3741d;
 	color: #eee48d;
 	width: 30em;
@@ -192,7 +192,7 @@
 	text-align: center;
 }
 
-.longlongman {
+.input {
 	display: flex;
 	width: 23em;
 	height: 2.5em;
@@ -211,7 +211,7 @@
 	color: rgb(215, 219, 230);
 }
 
-.cum {
+.sendButtton {
 	display: flex;
 	justify-content: center;
 	padding: 0.8em 1em;
@@ -223,11 +223,11 @@
 	background-color: rgb(71, 109, 124);
 }
 
-.cum:hover {
+.sendButtton:hover {
 	background-color: rgb(64, 99, 112);
 }
 
-.cum:active {
+.sendButtton:active {
 	background-color: rgb(56, 83, 95);
 }
 
