@@ -1,5 +1,7 @@
 function start() {
-	const socket = new WebSocket("ws://localhost:8000");
+	const host = window.location.hostname;
+	const uri = host === "localhost" ? "ws://localhost:8000" : `wss://${host}`;
+	const socket = new WebSocket(uri);
 
 	let userRequestText = document.getElementById("longlongman");
 	let userRequestButton = document.getElementById("cum");
@@ -30,7 +32,6 @@ function start() {
 
 	userRequestButton.addEventListener("click", () => {
 		if (socket.readyState === WebSocket.OPEN && userRequestText.value) {
-
 			socket.send(userRequestText.value);
 			console.log("Message sent to server: " + userRequestText.value);
 			createChatElement(userRequestText.value, "user");
