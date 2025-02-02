@@ -31,22 +31,20 @@ export const getBestAnswer = (
 
 	let filteredCatalog = catalog.slice();
 
-	if (correctedTerms.includes("gardenbeetle")) {
-		category = "gardenbeetle";
-	} else if (correctedTerms.includes("cleanbug")) {
-		category = "cleanbug";
-	} else if (correctedTerms.includes("windowfly")) {
-		category = "windowfly";
-	} else if (correctedTerms.includes("support")) {
+	if (correctedTerms.includes("support") || correctedTerms.includes("escalate") || correctedTerms.includes("ticket")) {
 		category = "support";
-	} else if (correctedTerms.includes("app")) {
+	} else if (correctedTerms.includes("app") || correctedTerms.includes("device") || correctedTerms.includes("devices")) {
 		category = "app";
+	} else if (!correctedTerms.includes("warranty")) {
+		if (correctedTerms.includes("gardenbeetle")) {
+			category = "gardenbeetle";
+		} else if (correctedTerms.includes("cleanbug")) {
+			category = "cleanbug";
+		} else if (correctedTerms.includes("windowfly")) {
+			category = "windowfly";
+		}
 	}
-	console.log("----BEFORE----");
-	console.log("category", category);
-	console.log("questions", questions.length);
-	console.log("Catalog", catalog.length);
-	console.log("filteredCatalog", filteredCatalog.length);
+	console.log("Category: " + category);
 
 	for (let i = 0; i < filteredCatalog.length; i++) {
 		if (filteredCatalog[i].category == category) {
@@ -63,11 +61,6 @@ export const getBestAnswer = (
 			}
 		}
 	}
-	console.log("----AFTER----");
-	console.log("category", category);
-	console.log("questions", questions.length);
-	console.log("Catalog", catalog.length);
-	console.log("filteredCatalog", filteredCatalog.length);
 
 	const preprocessed = stem(correctedTerms);
 
@@ -90,8 +83,6 @@ export const getBestAnswer = (
 			bestMatchId = id;
 		}
 	});
-
-	console.log(questions);
 
 	if (bestMatchId === null) {
 		return null;
