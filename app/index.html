@@ -12,7 +12,7 @@
 
 
 	<div class="back" id="back">
-		<div class="thembeautifuleyes">
+		<div class="header">
 			<img src="resources/bugland.png" alt="BOT" class="bot">
 		</div>
 
@@ -21,18 +21,18 @@
 		
 		<img class="donkeytron" id='img-default' src="resources/roboter rework blue.svg" alt="no image :c">
 		<img class="donkeyoff" id="img-off" src="resources/roboter less light.svg" alt="no lights :c">
-		<img class="evilbot" id="img-evil" src="resources/evildonkey.svg" alt="I'm so fucking angry maaan!">
+		<img class="evilbot" id="img-evil" src="resources/evildonkey.svg" alt="I'm so angry maaan!">
 
-		<div class="chest">
-			<div class="balls" id="balls"></div>
-			<div class="bottom">
+		<div class="content">
+			<div class="chatContainer" id="chatCon"></div>
+			<div class="chatBoxContainer">
 				<div class="write-indicator" id="write-indicator">
 					responding...
 				</div>
-				<div class="tummy">
-					<div class="peepee" id="peepee">
-						<input class="longlongman" id="longlongman" placeholder="Type in your question for DonkeyBot...">
-						<button class="cum" id="cum">send</button>
+				<div class="chatBox">
+					<div class="inputSendMerge" id="iSMerge">
+						<input class="input" id="inp-input" placeholder="Type in your question for DonkeyBot...">
+						<button class="sendButtton" id="btn-send">send</button>
 					</div>
 
 				</div>
@@ -48,8 +48,8 @@
 	element.style.visibility = 'hidden';
 
 	start(); //enter 
-	const inputField = document.getElementById("longlongman");
-	const sendButton = document.getElementById("cum");
+	const inputField = document.getElementById("inp-input");
+	const sendButton = document.getElementById("btn-send");
 
 	function bzzzzt(evil) {
 		let min = 1;
