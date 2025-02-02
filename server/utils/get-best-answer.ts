@@ -29,11 +29,19 @@ export const getBestAnswer = (
 
 	let category = "other";
 
-	let filteredCatalog = catalog.slice();
+	const filteredCatalog = catalog.slice();
 
-	if (correctedTerms.includes("support") || correctedTerms.includes("escalate") || correctedTerms.includes("ticket")) {
+	if (
+		correctedTerms.includes("support") ||
+		correctedTerms.includes("escalate") ||
+		correctedTerms.includes("ticket")
+	) {
 		category = "support";
-	} else if (correctedTerms.includes("app") || correctedTerms.includes("device") || correctedTerms.includes("devices")) {
+	} else if (
+		correctedTerms.includes("app") ||
+		correctedTerms.includes("device") ||
+		correctedTerms.includes("devices")
+	) {
 		category = "app";
 	} else if (!correctedTerms.includes("warranty")) {
 		if (correctedTerms.includes("gardenbeetle")) {
@@ -73,15 +81,19 @@ export const getBestAnswer = (
 
 	const tfidfs = calculateTFIDFs(questions, messageType);
 
+	console.log(tfidfs);
+
 	let maxSimilarity = 0;
 	let bestMatchId: string | null = null;
 
 	tfidfs.forEach((vector, id) => {
 		const similarity = cosineSimilarity(questionVector, vector);
+		console.log(similarity, id);
 		if (similarity > maxSimilarity) {
 			maxSimilarity = similarity;
 			bestMatchId = id;
 		}
+		console.log("maxSimilarity", maxSimilarity, bestMatchId);
 	});
 
 	if (bestMatchId === null) {

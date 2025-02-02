@@ -1,0 +1,82 @@
+// Typdefinitionen
+Typ Frage = {
+    id: String
+    frageText: String
+}
+
+Typ TermVektor = AssoziativeListe[String -> Zahl]
+
+// Hauptfunktion für TF-IDF-Berechnung
+Funktion berechneAlleTFIDFs(Fragenliste, Nachrichtentyp):
+    // 1. Dokumenthäufigkeit (DF) berechnen
+    DF-Tabelle = BerechneDokumentHäufigkeit(Fragenliste, Nachrichtentyp)
+    
+    // 2. Inverse Dokumenthäufigkeit (IDF) berechnen
+    IDF-Tabelle = BerechneIDF(DF-Tabelle, Länge(Fragenliste))
+    
+    // 3. TF-IDF für jede Frage berechnen
+    TFIDF-Ergebnisse = BerechneTFIDFProFrage(Fragenliste, IDF-Tabelle, Nachrichtentyp)
+    
+    Rückgabe TFIDF-Ergebnisse
+
+
+// Hilfsfunktion: Dokumenthäufigkeit (DF)
+Funktion BerechneDokumentHäufigkeit(Fragen, Nachrichtentyp):
+    Initialisiere DF-Tabelle als leere Assoziativliste
+    
+    Für jede Frage in Fragen:
+        // Text vorverarbeiten und eindeutige Begriffe extrahieren
+        verarbeiteteBegriffe = VorverarbeiteText(Frage.frageText, Nachrichtentyp)
+        eindeutigeBegriffe = SetzeAus(verarbeiteteBegriffe)
+        
+        // DF-Zähler aktualisieren
+        Für jeden Begriff in eindeutigeBegriffe:
+            DF-Tabelle[Begriff] = (DF-Tabelle[Begriff] oder 0) + 1
+    
+    Rückgabe DF-Tabelle
+
+
+// Hilfsfunktion: Inverse Dokumenthäufigkeit (IDF)
+Funktion BerechneIDF(DF-Tabelle, AnzahlDokumente):
+    Initialisiere IDF-Tabelle als leere Assoziativliste
+    
+    Für jeden Begriff in DF-Tabelle:
+        idfWert = Logarithmus(AnzahlDokumente / DF-Tabelle[Begriff])
+        IDF-Tabelle[Begriff] = idfWert
+    
+    Rückgabe IDF-Tabelle
+
+
+// Hilfsfunktion: Termhäufigkeit (TF) pro Frage
+Funktion BerechneTermHäufigkeit(Begriffe):
+    Initialisiere TF-Tabelle als leere Assoziativliste
+    
+    // Achtung: Begriffe sind bereits vorverarbeitet und eindeutig
+    Für jeden Begriff in Begriffe:
+        TF-Tabelle[Begriff] = (TF-Tabelle[Begriff] oder 0) + 1
+    
+    Rückgabe TF-Tabelle
+
+
+// Hilfsfunktion: TF-IDF pro Frage
+Funktion BerechneTFIDFProFrage(Fragen, IDF-Tabelle, Nachrichtentyp):
+    Initialisiere TFIDF-Ergebnisse als leere Assoziativliste
+    
+    Für jede Frage in Fragen mit Index:
+        // Text vorverarbeiten
+        verarbeiteteBegriffe = VorverarbeiteText(Frage.frageText, Nachrichtentyp)
+        eindeutigeBegriffe = SetzeAus(verarbeiteteBegriffe)
+        
+        // TF und TF-IDF berechnen
+        TF-Tabelle = BerechneTermHäufigkeit(eindeutigeBegriffe)
+        aktuellerVektor = Leerer TermVektor
+        
+        Für jeden Begriff in TF-Tabelle:
+            tfidfWert = TF-Tabelle[Begriff] * IDF-Tabelle[Begriff]
+            aktuellerVektor[Begriff] = tfidfWert
+        
+        // Eindeutige ID mit Index erstellen
+        dokumentID = Frage.id + "." + Index
+        TFIDF-Ergebnisse[dokumentID] = aktuellerVektor
+    
+    Rückgabe TFIDF-Ergebnisse

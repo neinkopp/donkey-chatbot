@@ -4,12 +4,15 @@ export const cosineSimilarity = (
 	vecA: TermVector,
 	vecB: TermVector
 ): number => {
+	// Initialize sums for dot product and magnitudes
 	let dotProduct = 0;
 	let magnitudeA = 0;
 	let magnitudeB = 0;
 
-	// Compute dot product and magnitudes
+	// Collect all terms from both vectors
 	const allTerms = new Set([...Object.keys(vecA), ...Object.keys(vecB)]);
+
+	// Calculate dot product and magnitudes
 	allTerms.forEach((term) => {
 		const a = vecA[term] || 0;
 		const b = vecB[term] || 0;
@@ -18,5 +21,6 @@ export const cosineSimilarity = (
 		magnitudeB += b ** 2;
 	});
 
+	// Final similarity value (dot product normalized by magnitudes)
 	return dotProduct / (Math.sqrt(magnitudeA) * Math.sqrt(magnitudeB));
 };

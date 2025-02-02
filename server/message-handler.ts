@@ -12,6 +12,7 @@ const sendMessage = (question: string, answer: string, socket: WebSocket, skipTi
 	const answerTime = answerWordCount * 0.05;
 
 	const totalTime = readTime + answerTime;
+
 	if(skipTimeout) {
 		socket.send(answer);
 		return;
