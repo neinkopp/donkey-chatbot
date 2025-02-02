@@ -81,19 +81,15 @@ export const getBestAnswer = (
 
 	const tfidfs = calculateTFIDFs(questions, messageType);
 
-	console.log(tfidfs);
-
 	let maxSimilarity = 0;
 	let bestMatchId: string | null = null;
 
 	tfidfs.forEach((vector, id) => {
 		const similarity = cosineSimilarity(questionVector, vector);
-		console.log(similarity, id);
 		if (similarity > maxSimilarity) {
 			maxSimilarity = similarity;
 			bestMatchId = id;
 		}
-		console.log("maxSimilarity", maxSimilarity, bestMatchId);
 	});
 
 	if (bestMatchId === null) {
